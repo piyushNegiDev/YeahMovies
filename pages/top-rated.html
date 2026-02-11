@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YeahMovies | Top Rated</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/top-rated.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">YM</span>
+          <div class="brand-text">
+            <span class="brand-title">YeahMovies</span>
+            <span class="brand-subtitle">Search the universe of cinema</span>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Discover</a>
+          <a href="genres.html" class="nav-link">Genres</a>
+          <a href="top-rated.html" class="nav-link is-active">Top Rated</a>
+          <a href="watchlist.html" class="nav-link">Watchlist</a>
+          <a href="about.html" class="nav-link">About</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <div class="hero-text">
+          <p class="eyebrow">Top rated</p>
+          <h1>Critics favorites.</h1>
+          <p class="hero-copy">
+            The highest-rated films ranked by TMDB. Filter by year or genre to
+            narrow the list.
+          </p>
+
+          <div class="hero-stats">
+            <div>
+              <span class="stat-label">Results</span>
+              <span class="stat-value" id="resultsCount">0</span>
+            </div>
+            <div>
+              <span class="stat-label">Filter</span>
+              <span class="stat-value" id="categoryLabel">All time</span>
+            </div>
+            <div>
+              <span class="stat-label">Updated</span>
+              <span class="stat-value" id="updatedLabel">Just now</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="card-sheen"></div>
+          <p class="hero-card-title">Top rated snapshot</p>
+          <div class="hero-card-list" id="topRatedStats">
+            <div class="hero-card-item">
+              <span>Highest rated</span>
+              <span>Now</span>
+            </div>
+          </div>
+          <button class="hero-card-btn" id="scrollToResults">View list</button>
+        </div>
+      </section>
+
+      <section class="controls">
+        <div class="chip-group">
+          <button class="chip is-active" data-filter="all">All time</button>
+          <button class="chip" data-filter="year">This year</button>
+          <button class="chip" data-filter="recent">Last 5 years</button>
+        </div>
+
+        <div class="filters">
+          <label class="select">
+            <span>Sort</span>
+            <select id="sortSelect">
+              <option value="vote_average.desc">Highest rated</option>
+              <option value="popularity.desc">Most popular</option>
+            </select>
+          </label>
+          <label class="select">
+            <span>Year</span>
+            <select id="yearSelect">
+              <option value="">Any</option>
+            </select>
+          </label>
+          <label class="select">
+            <span>Genre</span>
+            <select id="genreSelect">
+              <option value="">All</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <main class="content" id="topRatedResults">
+        <div class="section-header">
+          <div>
+            <h2 id="sectionTitle">Top rated movies</h2>
+            <p class="section-subtitle">
+              Films with the highest audience ratings.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid" id="topRatedGrid"></div>
+        <div class="load-more">
+          <button class="ghost-btn" id="loadMoreBtn">Load more</button>
+        </div>
+      </main>
+    </div>
+
+    <script src="../assets/js/top-rated.js"></script>
+  </body>
+</html>
