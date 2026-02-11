@@ -2,6 +2,8 @@
 
 Static movie discovery UI powered by TMDB.
 
+> Project status: This project is still in progress. The Sign Up and Get Started buttons are not working yet.
+
 ## Project Structure
 - `index.html` - Discover landing page.
 - `404.html` - Custom 404 for static hosts (kept at root for GitHub Pages).
@@ -24,3 +26,4 @@ Example (PowerShell):
 python -m http.server 5500
 ```
 Then open `http://localhost:5500/`.
+
