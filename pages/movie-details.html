@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YeahMovies | Movie</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/movie-details.css" />
+  </head>
+  <body class="detail-page">
+    <div class="page">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">YM</span>
+          <div class="brand-text">
+            <span class="brand-title">YeahMovies</span>
+            <span class="brand-subtitle">Search the universe of cinema</span>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Discover</a>
+          <a href="genres.html" class="nav-link">Genres</a>
+          <a href="top-rated.html" class="nav-link">Top Rated</a>
+          <a href="watchlist.html" class="nav-link">Watchlist</a>
+          <a href="about.html" class="nav-link">About</a>
+        </nav>
+
+        <div class="actions">
+          <a href="../index.html" class="ghost-btn back-link">Back to explore</a>
+        </div>
+      </header>
+
+      <section class="detail-hero">
+        <div class="detail-backdrop" id="backdrop"></div>
+        <div class="detail-poster">
+          <img id="poster" alt="Movie poster" />
+        </div>
+        <div class="detail-content">
+          <p class="eyebrow" id="eyebrow">Now playing</p>
+          <h1 id="title">Movie title</h1>
+          <p class="detail-tagline" id="tagline"></p>
+          <p class="detail-overview" id="overview"></p>
+          <div class="detail-actions">
+            <button class="solid-btn" id="watchlistToggle">
+              Add to watchlist
+            </button>
+          </div>
+
+          <div class="detail-meta">
+            <div>
+              <span class="stat-label">Release</span>
+              <span class="stat-value" id="releaseDate">--</span>
+            </div>
+            <div>
+              <span class="stat-label">Runtime</span>
+              <span class="stat-value" id="runtime">--</span>
+            </div>
+            <div>
+              <span class="stat-label">Rating</span>
+              <span class="stat-value" id="rating">--</span>
+            </div>
+          </div>
+
+          <div class="meta-grid" id="facts"></div>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h2>Trailer</h2>
+        <div class="trailer" id="trailer"></div>
+      </section>
+
+      <section class="detail-section">
+        <h2>Top cast</h2>
+        <div class="cast-grid" id="cast"></div>
+      </section>
+
+      <section class="detail-section">
+        <h2>Similar movies</h2>
+        <div class="grid" id="similar"></div>
+      </section>
+    </div>
+
+    <script src="../assets/js/movie-details.js"></script>
+  </body>
+</html>
